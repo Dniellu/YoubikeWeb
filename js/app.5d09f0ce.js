@@ -579,7 +579,7 @@
                     var t = this
                       , e = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
                     this.axios.get(e).then((function(e) {
-                        e ? (t.youbikes = Object.values(e.data.retVal),
+                        e ? (t.youbikes = Object.values(e.data),
                         t.setFavYoubikes()) : t.$store.commit("SET_MSG", "errorYoubike")
                     }
                     ))

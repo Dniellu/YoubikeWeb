@@ -294,7 +294,7 @@ export default {
       const youbikeAPI = 'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json';
       this.axios.get(youbikeAPI).then((response) => {
         if (response) {
-          this.youbikes = Object.values(response.data.retVal);
+          this.youbikes = Object.values(response.data);
           this.setFavYoubikes();
         } else {
           this.$store.commit('SET_MSG', 'errorYoubike');
